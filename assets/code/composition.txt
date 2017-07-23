@@ -1,0 +1,19 @@
+const compose = (f, g) => (x) => f(g(x))
+
+const head = (x) => x[0]
+
+const reverse = xs => xs.reverse()
+
+const last = compose(head, reverse)
+
+const list = [
+  'Meetup', 
+  'JavaScript', 
+  'Litoral',
+]
+
+head(reverse(list)) //=> 'Litoral'
+
+reverse(head(list)) //=> throws
+ 
+last(list) //=> 'Litoral'

@@ -1,0 +1,11 @@
+const square = a => a * a
+
+square(5) //=> 25
+
+[1, 2, 3, 4].map(i => square(i))
+[1, 2, 3, 4].map(square)
+
+const add = a => b => a + b
+
+const inc = add(1)
+inc(5) //=> 6

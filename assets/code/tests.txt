@@ -1,0 +1,6 @@
+const saveUser = (user) => Db.save(user)
+
+const saveUser = (Db) => (user) => Db.save(user)
+
+const saveUserToMock = saveUser(mockDB)
+const saveUserToDB = saveUser(realkDB)
