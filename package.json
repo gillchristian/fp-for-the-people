@@ -11,7 +11,8 @@
     "start": "cross-env NODE_ENV=development node server.js",
     "prettier": "prettier --single-quote --trailing-comma es5 --no-semi",
     "format": "npm run prettier -- --write '{,!(node_modules|build)/**/}*.js'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "author": "",
   "license": "MIT",
@@ -47,6 +48,7 @@
     "css-loader": "^0.23.0",
     "eslint": "^3.8.0",
     "eslint-config-formidable": "^2.0.1",
+    "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-filenames": "^1.1.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-react": "^6.4.1",
