@@ -51,7 +51,6 @@ import Resources from './slides/34.Resources'
 import Libraries from './slides/35.Libraries'
 import More from './slides/36.More'
 import Questions from './slides/37.Questions'
-import Thanks from './slides/38.Thanks'
 
 // Require CSS
 require('normalize.css')
@@ -65,6 +64,12 @@ const images = {
   curry: require('../assets/curry.jpg'),
   thanks: require('../assets/thanks.gif'),
   questions: require('../assets/questions.gif'),
+  minig: require('../assets/mining.jpg'),
+  rocks: require('../assets/rocks.jpg'),
+  pure: require('../assets/pure.jpg'),
+  city: require('../assets/city.jpg'),
+  lego: require('../assets/lego.jpg'),
+  library: require('../assets/library.jpg'),
 }
 
 preloader(images)
@@ -121,7 +126,7 @@ export default class Presentation extends React.Component {
             { loc: [0, 2], note: 'Walking through some code' },
           ]}
         />
-        <Slide bgColor="primary">
+        <Slide bgImage={images.pure} bgDarken={0.5}>
           <PureFunctions />
         </Slide>
         <Slide bgColor="primary">
@@ -149,7 +154,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <PureExample />
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgImage={images.lego} bgDarken={0.5}>
           <Composition />
         </Slide>
         <CodeSlide
@@ -223,7 +228,7 @@ export default class Presentation extends React.Component {
             { loc: [0, 1], note: 'Walking through some code' },
           ]}
         />
-        <Slide bgColor="primary">
+        <Slide bgImage={images.rocks}>
           <Immutability />
         </Slide>
         <Slide bgColor="primary">
@@ -244,16 +249,16 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <WhyTho />
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="#f1e05a">
           <BecauseJS />
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgImage={images.city}>
           <BecauseWeCan />
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgImage={images.minig}>
           <Resources />
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgImage={images.library} bgDarken={0.75}>
           <Libraries />
         </Slide>
         <Slide bgColor="primary">
@@ -262,9 +267,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Questions image={images.questions} />
         </Slide>
-        <Slide bgColor="primary">
-          <Thanks image={images.thanks} />
-        </Slide>
+        <Slide bgColor="primary" bgImage={images.thanks} />
       </Deck>
     )
   }
