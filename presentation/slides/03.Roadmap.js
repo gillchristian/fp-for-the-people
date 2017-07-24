@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Heading } from 'spectacle'
 
-import ListItems from '../helpers/ListItems'
+import ListItems from '../components/ListItems'
 
 const roadmap = [
   'Intro',

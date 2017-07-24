@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ListItems from '../helpers/ListItems'
+import ListItems from '../components/ListItems'
 
 const pros = ['Predictability', 'Mutation Tracking', 'Performance']
 

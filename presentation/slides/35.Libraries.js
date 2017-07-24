@@ -1,46 +1,31 @@
 import React from 'react'
 
-import { Heading } from 'spectacle'
+import { Text } from 'spectacle'
 
-import ListItems from '../helpers/ListItems'
+import ListItems from '../components/ListItems'
+import Link from '../components/Link'
 
 const libs = [
   <span>
-    <a href="https://github.com/fantasyland/fantasy-land" target="_blank">
-      Fantasy land
-    </a>
+    <Link href="https://github.com/fantasyland/fantasy-land">Fantasy land</Link>
     {' (spec)'}
   </span>,
   <span>
-    <a href="http://ramdajs.com/" target="_blank">
-      Ramda
-    </a>
+    <Link href="http://ramdajs.com/">Ramda</Link>
     {' & '}
-    <a href="https://github.com/ramda/ramda-fantasy" target="_blank">
-      ramda-fantasy
-    </a>
+    <Link href="https://github.com/ramda/ramda-fantasy">ramda-fantasy</Link>
   </span>,
-  <a href="http://folktalejs.org/" target="_blank">
-    Folktale
-  </a>,
-  <a href="https://facebook.github.io/immutable-js/" target="_blank">
-    Immutable
-  </a>,
-  <a href="https://github.com/DrBoolean/immutable-ext" target="_blank">
-    Immutable-ext
-  </a>,
-  <a href="https://sanctuary.js.org/" target="_blank">
-    Sanctuary
-  </a>,
-  <a href="http://reactivex.io/rxjs/" target="_blank">
-    RxJS
-  </a>,
+  <Link href="http://folktalejs.org/">Folktale</Link>,
+  <Link href="https://github.com/DrBoolean/immutable-ext">Immutable-ext</Link>,
+  <Link href="https://sanctuary.js.org/">Sanctuary</Link>,
+  <Link href="http://reactivex.io/rxjs/">RxJS</Link>,
+  <Link href="https://github.com/fluture-js/Fluture">Fluture</Link>,
 ]
 
 export default function Libraries() {
   return (
     <div>
-      <Heading>Libraries</Heading>
+      <Text>Libraries</Text>
       <ListItems items={libs} />
     </div>
   )

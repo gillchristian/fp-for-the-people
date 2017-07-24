@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Heading, List, ListItem } from 'spectacle'
 
-import ListItems from '../helpers/ListItems'
+import ListItems from '../components/ListItems'
 
 const wills = [
   'My journey into FP',

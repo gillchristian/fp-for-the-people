@@ -1,70 +1,38 @@
 import React from 'react'
 
-import { Heading } from 'spectacle'
+import { Text } from 'spectacle'
 
-import ListItems from '../helpers/ListItems'
+import ListItems from '../components/ListItems'
+import Link from '../components/Link'
 
-const libs = [
-  <a
-    href="https://github.com/xgrommx/awesome-functional-programming"
-    target="_blank"
-  >
+const more = [
+  <Link href="https://github.com/xgrommx/awesome-functional-programming">
     awesome-functional-programming
-  </a>,
-  <a href="https://github.com/stoeffel/awesome-fp-js" target="_blank">
-    awesome-fp-js
-  </a>,
-  <a
-    href="https://github.com/timoxley/functional-javascript-workshop"
-    target="_blank"
-  >
-    functional-javascript-workshop
-  </a>,
+  </Link>,
+  <Link href="https://github.com/stoeffel/awesome-fp-js">awesome-fp-js</Link>,
   <span>
-    <a href="http://fsharpforfunandprofit.com/fppatterns/" target="_blank">
+    <Link href="http://fsharpforfunandprofit.com/fppatterns/">
       FP Design Patterns
-    </a>
+    </Link>
     {' (F#)'}
   </span>,
-  <span>
-    <a href="https://twitter.com/drboolean" target="_blank">
-      @drboolean
-    </a>
-    {': '}
-    <a
-      href="https://github.com/MostlyAdequate/mostly-adequate-guide"
-      target="_blank"
-    >
-      Book
-    </a>
-    {', '}
-    <a
-      href="https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript"
-      target="_blank"
-    >
-      Videos
-    </a>
-  </span>,
-  <a
-    href="https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell"
-    target="_blank"
-  >
+  <Link href="https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell">
     Functional core, Imperative shell
-  </a>,
+  </Link>,
   <span>
-    <a
-      href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf"
-      target="_blank"
-    >
+    <Link href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">
       Why FP Matters
-    </a>
+    </Link>
     {' (paper)'}
   </span>,
+  <Link href="http://elm-lang.org/">Elm</Link>,
+  <Link href="https://reasonml.github.io/">Reason</Link>,
 ]
 
 const More = () =>
   <div>
-    <ListItems items={libs} />
+    <Text>More</Text>
+    <ListItems items={more} />
   </div>
 
 export default More
