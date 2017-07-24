@@ -9,7 +9,7 @@
 
 const barker = (state) => ({
   bark() {
-    console.log(
+    return (
       `Woof, woof! I'm ${state.name}!`
     )
   }

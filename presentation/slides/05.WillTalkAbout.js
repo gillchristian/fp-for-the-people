@@ -10,13 +10,12 @@ const wills = [
   'Insights on why and how to do FP in JS',
 ]
 
-export default function WillTalkAbout() {
-  return (
-    <div>
-      <Heading>
-        What this talk <b>is</b>
-      </Heading>
-      <ListItems items={wills} />
-    </div>
-  )
-}
+const WillTalkAbout = () =>
+  <div>
+    <Heading>
+      What this talk <b>is</b>
+    </Heading>
+    <ListItems items={wills} />
+  </div>
+
+export default WillTalkAbout

@@ -2,6 +2,6 @@ import React from 'react'
 
 import { Heading } from 'spectacle'
 
-const Declarative = ({ image }) => <Heading>Declarative</Heading>
+const Declarative = () => <Heading>Declarative</Heading>
 
 export default Declarative

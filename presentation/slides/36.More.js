@@ -26,9 +26,6 @@ const libs = [
     </a>
     {' (F#)'}
   </span>,
-  <a href="https://github.com/DrBoolean/immutable-ext" target="_blank">
-    Immutable-ext
-  </a>,
   <span>
     <a href="https://twitter.com/drboolean" target="_blank">
       @drboolean
@@ -65,10 +62,9 @@ const libs = [
   </span>,
 ]
 
-export default function More() {
-  return (
-    <div>
-      <ListItems items={libs} />
-    </div>
-  )
-}
+const More = () =>
+  <div>
+    <ListItems items={libs} />
+  </div>
+
+export default More

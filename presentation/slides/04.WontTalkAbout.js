@@ -13,13 +13,12 @@ const wonts = [
   'Black magic',
 ]
 
-export default function WontTalkAbout() {
-  return (
-    <div>
-      <Heading>
-        What this talk is <b>not</b>
-      </Heading>
-      <ListItems items={wonts} />
-    </div>
-  )
-}
+const WontTalkAbout = () =>
+  <div>
+    <Heading>
+      What this talk is <b>not</b>
+    </Heading>
+    <ListItems items={wonts} />
+  </div>
+
+export default WontTalkAbout

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Heading, Text } from 'spectacle'
 
-const BecauseJS = ({}) =>
+const BecauseJS = () =>
   <div>
     <Heading fit>It's JavaScript</Heading>
     <Text>

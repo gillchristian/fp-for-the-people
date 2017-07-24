@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Heading, Text } from 'spectacle'
 
-const Functions = ({}) =>
+const Functions = () =>
   <div>
     <Heading>Functions are things</Heading>
     <Text>(first class citizens)</Text>

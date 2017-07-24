@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Heading, Text } from 'spectacle'
 
-const Composition = ({}) =>
+const Composition = () =>
   <div>
     <Heading>Composition</Heading>
     <Text>

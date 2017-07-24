@@ -51,6 +51,7 @@ import Resources from './slides/34.Resources'
 import Libraries from './slides/35.Libraries'
 import More from './slides/36.More'
 import Questions from './slides/37.Questions'
+import Remember from './slides/38.Remember'
 
 // Require CSS
 require('normalize.css')
@@ -70,6 +71,7 @@ const images = {
   city: require('../assets/city.jpg'),
   lego: require('../assets/lego.jpg'),
   library: require('../assets/library.jpg'),
+  onlyU: require('../assets/only-you.jpg'),
 }
 
 preloader(images)
@@ -199,7 +201,7 @@ export default class Presentation extends React.Component {
                   </a>
                   {'. '}
                   <a href="https://youtu.be/wfMtDGfHWpA" target="_blank">
-                    Source
+                    Reference
                   </a>.
                 </span>
               ),
@@ -266,6 +268,9 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Questions image={images.questions} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Remember image={images.onlyU} />
         </Slide>
         <Slide bgColor="primary" bgImage={images.thanks} />
       </Deck>

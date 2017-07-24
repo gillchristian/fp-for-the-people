@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Heading, Link, Text } from 'spectacle'
 
-const Component = ({}) =>
+const Component = () =>
   <div>
     <Heading size={4} textColor="tertiary">
       Christian Gill
