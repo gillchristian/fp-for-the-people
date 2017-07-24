@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Heading, List, ListItem } from 'spectacle'
 
+import ListItems from '../helpers/ListItems'
+
 const wonts = [
   'An expert talking',
   'Category theory',
@@ -11,22 +13,13 @@ const wonts = [
   'Black magic',
 ]
 
-const listItems = list =>
-  <List textColor="tertiary">
-    {list.map((item, key) =>
-      <ListItem key={key}>
-        {item}
-      </ListItem>
-    )}
-  </List>
-
 export default function WontTalkAbout() {
   return (
     <div>
       <Heading>
         What this talk is <b>not</b>
       </Heading>
-      {listItems(wonts)}
+      <ListItems items={wonts} />
     </div>
   )
 }

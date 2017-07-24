@@ -1,0 +1,54 @@
+// --- COMPOSITION ---
+
+// dog              = eater + barker 
+// cat              = eater + meower
+// cleaningRobot    = driver + cleaner
+// murderRobot      = driver + killer
+// cleaningRobotDog 
+//    = driver + cleaner + barker
+
+const barker = (state) => ({
+  bark() {
+    console.log(
+      `Woof, woof! I'm ${state.name}!`
+    )
+  }
+})
+
+const driver = (state) => ({
+  drive() {
+    state.pos = state.pos + state.speed
+  }
+})
+
+const cleaner = (state) => ({
+  clean() {
+    state.energy -= 10
+  }
+})
+
+const cleanerRobotDog = (name) => {
+  let state = {
+    name,
+    speed: 100,
+    pos: 0,
+    energy: 100,
+  }
+
+  return Object.assign(
+    { }, 
+    barker(state), 
+    driver(state), 
+    cleaner(state)
+  )
+}
+
+const mark = cleanerRobotDog('Mark')
+
+mark.bark() //=> "Woof, woof!, I'm Mark"
+
+mark.drive() 
+mark.pos //=> 100
+
+mark.clean() 
+mark.energy //=> 90

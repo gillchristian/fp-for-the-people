@@ -1,0 +1,48 @@
+const fmwks = [
+  { 
+    name: 'React', 
+    author: 'Facebook', 
+    vdom: true, 
+  },
+  { 
+    name: 'Angular', 
+    author: 'Google', 
+    vdom: false, 
+  },
+  { 
+    name: 'Vue', 
+    author: 'Evan You', 
+    vdom: true, 
+  },
+  { 
+    name: 'Cycle.js', 
+    author: 'André Staltz', 
+    vdom: true, 
+  },
+  { 
+    name: 'Ember', 
+    author: 'Yehuda Katz', 
+    vdom: false, 
+  },
+]
+
+// ----- IMPERATIVE -----
+
+const labels = []
+let index = 0
+
+for (let i = 0 ; i < fmwks.length ; i++) {
+  const label = 
+    `${fmwks[i].name} by ${fmwks[i].author}`
+
+  if (fmwks[i].vdom) {
+    labels[index] = label
+    index++
+  }
+}
+
+// ----- DECLARATIVE -----
+
+const labels2 = fmwks
+  .filter(o => o.vdom)
+  .map(o => `${o.name} by ${o.author}`)

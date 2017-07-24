@@ -1,0 +1,120 @@
+// ----- 00 ---------
+
+Dog
+  .bark()
+
+// ----- 01 ---------
+
+Dog
+  .bark()
+
+Cat
+  .meow()
+
+// ----- 02 ---------
+
+Dog
+  .eat()
+  .bark()
+
+Cat
+  .eat()
+  .meow()
+
+// ----- 03 ---------
+
+Animal
+  .eat()
+
+  Dog
+    .bark()
+
+  Cat
+    .meow()
+
+// ----- 04 ---------
+
+MurderRobot
+  .drive()
+  .kil()
+
+CleaningRobot
+  .drive()
+  .clean()
+
+Animal
+  .eat()
+
+  Dog
+    .bark()
+
+  Cat
+    .meow()
+
+// ----- 05 ---------
+
+Robot
+  .drive()
+
+  Murder
+    .kil()
+
+  Cleaning
+    .clean()
+
+Animal
+  .eat()
+
+  Dog
+    .bark()
+
+  Cat
+    .meow()
+
+
+// ----- 06 - 1 -----
+GameCharacter
+  .bark()
+
+  Robot
+    .drive()
+
+      CleaningRobot
+        .clean()
+
+        CleanerRobotDog
+
+      MurderRobot
+        .kill()
+
+  Animal
+    .eat()
+
+    Dog
+
+    Cat
+      .meow()
+
+// ----- 06 - 1 -----
+GameCharacter
+
+  Robot
+    .drive()
+
+      CleaningRobot
+        .clean()
+
+        CleanerRobotDog
+          .bark()
+
+      MurderRobot
+        .kill()
+
+  Animal
+    .eat()
+
+    Dog
+      .bark()
+
+    Cat
+      .meow()

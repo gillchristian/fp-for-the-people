@@ -1,0 +1,26 @@
+// ----- IMMUTABILITY -----
+
+const { Map } = require('immutable')
+
+const map1 = Map({ a: 1, b: 2, c: 3 })
+
+const map2 = map1.set('b', 50)
+
+map1.get('b') //=> 2
+map2.get('b') //=> 50
+
+map1 === map2 //=> false
+
+const obj1 = { a: 1, b: 2, c: 3 }
+const obj2 = Object.assign({}, obj1)
+const obj3 = obj2
+
+obj2.b = 50
+
+obj1.b // => 2 
+obj2.b // => 50
+obj3.b // => 50
+
+obj1 === obj2 //=> false
+obj1 === obj3 //=> false
+obj2 === obj3 //=> true

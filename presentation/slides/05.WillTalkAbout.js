@@ -2,20 +2,13 @@ import React from 'react'
 
 import { Heading, List, ListItem } from 'spectacle'
 
+import ListItems from '../helpers/ListItems'
+
 const wills = [
   'My journey into FP',
   'Some core concepts about FP',
   'Insights on why and how to do FP in JS',
 ]
-
-const listItems = list =>
-  <List textColor="tertiary">
-    {list.map((item, key) =>
-      <ListItem key={key}>
-        {item}
-      </ListItem>
-    )}
-  </List>
 
 export default function WillTalkAbout() {
   return (
@@ -23,7 +16,7 @@ export default function WillTalkAbout() {
       <Heading>
         What this talk <b>is</b>
       </Heading>
-      {listItems(wills)}
+      <ListItems items={wills} />
     </div>
   )
 }

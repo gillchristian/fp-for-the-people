@@ -27,8 +27,8 @@ import Me from './slides/02.Me'
 import Roadmap from './slides/03.Roadmap'
 import WontTalkAbout from './slides/04.WontTalkAbout'
 import WillTalkAbout from './slides/05.WillTalkAbout'
-import IKnowFP from './slides/06.IKnowFP'
-import FP from './slides/07.FP'
+import FP from './slides/06.FP'
+import IKnowFP from './slides/07.IKnowFP'
 import Definition from './slides/08.Definition'
 import Functions from './slides/09.Functions'
 import PureFunctions from './slides/11.PureFunctions'
@@ -39,18 +39,32 @@ import Composition from './slides/17.Composition'
 import Fractal from './slides/18.Fractal'
 import CompositionVsInheritance from './slides/19.CompositionVsInheritance'
 import GorillaBanana from './slides/20.GorillaBanana'
+import Curry from './slides/23.Curry'
+import Declarative from './slides/25.Declarative'
+import Immutability from './slides/27.Immutability'
+import ImmutabilityPros from './slides/28.ImmutabilityPros'
+import ImmutabilityResources from './slides/29.ImmutabilityResources'
+import WhyTho from './slides/31.WhyTho'
+import BecauseJS from './slides/32.BecauseJS'
+import BecauseWeCan from './slides/33.BecauseWeCan'
+import Resources from './slides/34.Resources'
+import Libraries from './slides/35.Libraries'
+import More from './slides/36.More'
+import Questions from './slides/37.Questions'
+import Thanks from './slides/38.Thanks'
+
 // Require CSS
 require('normalize.css')
 require('spectacle/lib/themes/default/index.css')
 
 const images = {
-  city: require('../assets/city.jpg'),
-  kat: require('../assets/kat.png'),
-  logo: require('../assets/formidable-logo.svg'),
-  markdown: require('../assets/markdown.png'),
+  ohComeOn: require('../assets/oh-come-on.gif'),
   iKnowFP: require('../assets/i-know-fp.png'),
   fractal: require('../assets/fractal.png'),
   gorilla: require('../assets/gorilla-banana.jpg'),
+  curry: require('../assets/curry.jpg'),
+  thanks: require('../assets/thanks.gif'),
+  questions: require('../assets/questions.gif'),
 }
 
 preloader(images)
@@ -59,7 +73,7 @@ const theme = createTheme(
   {
     primary: 'white',
     secondary: '#434343',
-    tertiary: '#03A9FC',
+    tertiary: '#4286f4',
     quartenary: '#CECECE',
   },
   {
@@ -71,40 +85,35 @@ const theme = createTheme(
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck
-        transition={['zoom', 'slide']}
-        transitionDuration={500}
-        theme={theme}
-      >
-        <Slide transition={['zoom']} bgColor="primary">
+      <Deck transition={['slide']} transitionDuration={500} theme={theme}>
+        <Slide bgColor="primary">
           <Intro />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <Me />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <Roadmap />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <WontTalkAbout />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <WillTalkAbout />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
-          <IKnowFP image={images.iKnowFP} />
-        </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <FP />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
+          <IKnowFP image={images.iKnowFP} />
+        </Slide>
+        <Slide bgColor="primary" bgImage={images.ohComeOn}>
           <Definition />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <Functions />
         </Slide>
         <CodeSlide
-          transition={['zoom']}
           lang="js"
           code={require('raw-loader!../assets/code/functions.txt')}
           ranges={[
@@ -112,14 +121,13 @@ export default class Presentation extends React.Component {
             { loc: [0, 2], note: 'Walking through some code' },
           ]}
         />
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <PureFunctions />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <PureFunctionsDefinition />
         </Slide>
         <CodeSlide
-          transition={['zoom']}
           lang="js"
           code={require('raw-loader!../assets/code/pure.txt')}
           ranges={[
@@ -127,11 +135,10 @@ export default class Presentation extends React.Component {
             { loc: [0, 2], note: 'Walking through some code' },
           ]}
         />
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <EzTestEsLife />
         </Slide>
         <CodeSlide
-          transition={['zoom']}
           lang="js"
           code={require('raw-loader!../assets/code/tests.txt')}
           ranges={[
@@ -139,14 +146,13 @@ export default class Presentation extends React.Component {
             { loc: [0, 2], note: 'Walking through some code' },
           ]}
         />
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <PureExample />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <Composition />
         </Slide>
         <CodeSlide
-          transition={['zoom']}
           lang="js"
           code={require('raw-loader!../assets/code/composition.txt')}
           ranges={[
@@ -154,14 +160,110 @@ export default class Presentation extends React.Component {
             { loc: [0, 2], note: 'Walking through some code' },
           ]}
         />
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <Fractal image={images.fractal} />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <CompositionVsInheritance />
         </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
           <GorillaBanana image={images.gorilla} />
+        </Slide>
+        {/* TODO: add inheritance example */}
+        <CodeSlide
+          lang="js"
+          code={require('raw-loader!../assets/code/composition-ftw.txt')}
+          ranges={[
+            { loc: [0, 1], title: 'Composition' },
+            { loc: [2, 8] },
+            { loc: [9, 16] },
+            { loc: [17, 22] },
+            { loc: [23, 28] },
+            { loc: [29, 44] },
+            { loc: [45, 46] },
+            { loc: [47, 48] },
+            { loc: [49, 51] },
+            { loc: [52, 54] },
+            {
+              loc: [0, 1],
+              note: (
+                <span>
+                  Run example on{' '}
+                  <a href="https://goo.gl/K8XXhV" target="_blank">
+                    JS Bin
+                  </a>
+                  {'. '}
+                  <a href="https://youtu.be/wfMtDGfHWpA" target="_blank">
+                    Source
+                  </a>.
+                </span>
+              ),
+            },
+          ]}
+        />
+        <Slide bgImage={images.curry} bgDarken={0.75}>
+          <Curry />
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require('raw-loader!../assets/code/curry.txt')}
+          ranges={[
+            { loc: [0, 1], title: 'Curry' },
+            { loc: [0, 1], note: 'Walking through some code' },
+          ]}
+        />
+        <Slide bgColor="primary">
+          <Declarative />
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require('raw-loader!../assets/code/declarative.txt')}
+          ranges={[
+            { loc: [0, 1], title: 'Declarative' },
+            { loc: [0, 1], note: 'Walking through some code' },
+          ]}
+        />
+        <Slide bgColor="primary">
+          <Immutability />
+        </Slide>
+        <Slide bgColor="primary">
+          <ImmutabilityPros />
+        </Slide>
+        <Slide bgColor="primary">
+          <ImmutabilityResources />
+        </Slide>
+        {/* TODO: add JS Bin http://jsbin.com/safiwa/edit?js,console */}
+        <CodeSlide
+          lang="js"
+          code={require('raw-loader!../assets/code/immutability.txt')}
+          ranges={[
+            { loc: [0, 1], title: 'Immutability' },
+            { loc: [0, 1], note: 'Walking through some code' },
+          ]}
+        />
+        <Slide bgColor="primary">
+          <WhyTho />
+        </Slide>
+        <Slide bgColor="primary">
+          <BecauseJS />
+        </Slide>
+        <Slide bgColor="primary">
+          <BecauseWeCan />
+        </Slide>
+        <Slide bgColor="primary">
+          <Resources />
+        </Slide>
+        <Slide bgColor="primary">
+          <Libraries />
+        </Slide>
+        <Slide bgColor="primary">
+          <More />
+        </Slide>
+        <Slide bgColor="primary">
+          <Questions image={images.questions} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Thanks image={images.thanks} />
         </Slide>
       </Deck>
     )
