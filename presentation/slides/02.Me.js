@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Heading, Link, Text } from 'spectacle'
+import { Heading, Text } from 'spectacle'
+
+import Link from '../components/Link'
 
 const Component = () =>
   <div>
@@ -8,21 +10,9 @@ const Component = () =>
       Christian Gill
     </Heading>
     <Text margin="50px 0px 0px">
-      <Link
-        href="https://gillchristian.xyz"
-        target="_blank"
-        textColor="quaternary"
-      >
-        React JS
-      </Link>
+      <Link href="https://gillchristian.xyz/about-me">React JS</Link>
       {' @ '}
-      <Link
-        href="https://housinganywhere.com/"
-        target="_blank"
-        textColor="quaternary"
-      >
-        Housing Anywhere
-      </Link>
+      <Link href="https://housinganywhere.com/">Housing Anywhere</Link>
     </Text>
   </div>
 

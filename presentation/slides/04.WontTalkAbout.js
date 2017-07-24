@@ -15,8 +15,8 @@ const wonts = [
 
 const WontTalkAbout = () =>
   <div>
-    <Heading>
-      What this talk is <b>not</b>
+    <Heading fit size={2} lineHeight={1}>
+      What this talk IS NOT
     </Heading>
     <ListItems items={wonts} />
   </div>

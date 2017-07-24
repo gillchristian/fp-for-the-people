@@ -9,9 +9,7 @@ const Component = () =>
       return the same output and does not have any observable side effect.
     </Quote>
     <Cite>Brian Lonsdorf</Cite>
-    <Cite>
-      <i>Mostly adequate guide to FP</i>
-    </Cite>
+    <Cite>Mostly adequate guide to FP</Cite>
   </BlockQuote>
 
 export default Component

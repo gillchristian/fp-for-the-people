@@ -20,6 +20,9 @@ const learning = [
       Videos
     </Link>
   </span>,
+  <Link href="http://randycoulman.com/blog/categories/thinking-in-ramda/">
+    Thinking in Ramda
+  </Link>,
 ]
 
 const More = () =>

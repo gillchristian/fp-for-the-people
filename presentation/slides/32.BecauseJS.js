@@ -5,7 +5,7 @@ import { Heading, Text } from 'spectacle'
 const BecauseJS = () =>
   <div>
     <Heading fit>It's JavaScript</Heading>
-    <Text>
+    <Text margin="50" textSize="3rem">
       {'¯\\_(ツ)_/¯'}
     </Text>
   </div>

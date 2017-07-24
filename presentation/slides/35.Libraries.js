@@ -22,11 +22,10 @@ const libs = [
   <Link href="https://github.com/fluture-js/Fluture">Fluture</Link>,
 ]
 
-export default function Libraries() {
-  return (
-    <div>
-      <Text>Libraries</Text>
-      <ListItems items={libs} />
-    </div>
-  )
-}
+const Libraries = () =>
+  <div>
+    <Text>Libraries</Text>
+    <ListItems items={libs} />
+  </div>
+
+export default Libraries

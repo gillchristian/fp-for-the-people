@@ -42,7 +42,6 @@ import PureExample from './slides/16.PureExample'
 import Composition from './slides/17.Composition'
 import Fractal from './slides/18.Fractal'
 import CompositionVsInheritance from './slides/19.CompositionVsInheritance'
-import GorillaBanana from './slides/20.GorillaBanana'
 import Curry from './slides/23.Curry'
 import Declarative from './slides/25.Declarative'
 import Immutability from './slides/27.Immutability'
@@ -174,11 +173,8 @@ export default class Presentation extends React.Component {
           <Slide bgColor="primary">
             <Fractal image={images.fractal} />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgImage={images.gorilla} bgDarken={0.5}>
             <CompositionVsInheritance />
-          </Slide>
-          <Slide bgColor="primary">
-            <GorillaBanana image={images.gorilla} />
           </Slide>
           {/* TODO: add inheritance example */}
           <CodeSlide

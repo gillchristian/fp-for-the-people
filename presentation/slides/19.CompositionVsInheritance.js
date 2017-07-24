@@ -1,8 +1,13 @@
 import React from 'react'
 
-import { Heading } from 'spectacle'
+import { Heading, Text } from 'spectacle'
 
 const CompositionVsInheritance = () =>
-  <Heading fit>Composition vs. Inheritance</Heading>
+  <div>
+    <Heading fit>Composition vs. Inheritance</Heading>
+    <Text textSize="3rem" margin="50" textColor="primary">
+      {'<gorilla-banana-problem />'}
+    </Text>
+  </div>
 
 export default CompositionVsInheritance
