@@ -5,7 +5,8 @@ import { Heading, Text } from 'spectacle'
 const BecaseWeCan = () =>
   <div>
     <Heading fit>Because we can</Heading>
-    <Text fit margin="50" textColor="primary">
+    <br />
+    <Text fit textColor="primary">
       P.S.: functions are first class citizens
     </Text>
   </div>
