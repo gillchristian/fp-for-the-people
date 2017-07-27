@@ -1,6 +1,19 @@
-const saveUser = (user) => Db.save(user)
+const _saveUser = user => Db.save(user)
 
-const saveUser = (Db) => (user) => Db.save(user)
+const saveUser = Db => user => Db.save(user)
+
+const saveUserToDB = saveUser(realDB)
+
+const createMockDB = (obj) => ({
+  save: (user) => {
+    obj.users.push(user)
+    return obj.users  
+  }
+})
+
+const mockDB  = createMockDB({ users: [] })
 
 const saveUserToMock = saveUser(mockDB)
-const saveUserToDB = saveUser(realkDB)
+
+saveUserToMock('Carla') //=> ['Carla']
+saveUserToMock('Manu')  //=> ['Carla', 'Manu']

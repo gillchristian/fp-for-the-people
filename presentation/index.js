@@ -35,6 +35,7 @@ import FP from './slides/06.FP'
 import IKnowFP from './slides/07.IKnowFP'
 import Definition from './slides/08.Definition'
 import Functions from './slides/09.Functions'
+import HoFs from './slides/10.HoFs'
 import PureFunctions from './slides/11.PureFunctions'
 import PureFunctionsDefinition from './slides/12.PureFunctionsDefiniton'
 import EzTestEsLife from './slides/14.EzTestEzLife'
@@ -123,12 +124,21 @@ export default class Presentation extends React.Component {
           <Slide bgColor="primary">
             <Functions />
           </Slide>
+          <Slide bgColor="primary">
+            <HoFs />
+          </Slide>
           <CodeSlide
             lang="js"
             code={require('raw-loader!../assets/code/functions.txt')}
             ranges={[
-              { loc: [0, 11] },
-              { loc: [0, 2], note: 'Walking through some code' },
+              { loc: [0, 1], title: 'Higher Order Functions' },
+              { loc: [0, 3] },
+              { loc: [4, 6], note: 'Pass functions as parameters' },
+              { loc: [7, 8], note: 'Return functions from other functions' },
+              { loc: [9, 10] },
+              { loc: [11, 13] },
+              { loc: [7, 13] },
+              { loc: [14, 24] },
             ]}
           />
           <Slide bgImage={images.pure} bgDarken={0.5}>
@@ -141,8 +151,18 @@ export default class Presentation extends React.Component {
             lang="js"
             code={require('raw-loader!../assets/code/pure.txt')}
             ranges={[
-              { loc: [0, 16] },
-              { loc: [0, 2], note: 'Walking through some code' },
+              { loc: [0, 1], title: 'Pure functions' },
+              { loc: [0, 4] },
+              { loc: [5, 6] },
+              { loc: [5, 9] },
+              { loc: [10, 11] },
+              { loc: [10, 14] },
+              { loc: [15, 16] },
+              { loc: [17, 22] },
+              { loc: [23, 30] },
+              { loc: [31, 32] },
+              { loc: [33, 36] },
+              { loc: [37, 40] },
             ]}
           />
           <Slide bgColor="primary">
@@ -152,8 +172,23 @@ export default class Presentation extends React.Component {
             lang="js"
             code={require('raw-loader!../assets/code/tests.txt')}
             ranges={[
-              { loc: [0, 11] },
-              { loc: [0, 2], note: 'Walking through some code' },
+              { loc: [0, 0], title: 'DI & Tests' },
+              { loc: [0, 1], note: 'Impure' },
+              { loc: [2, 3], note: 'Pure' },
+              { loc: [4, 5], note: 'Dev/Prod' },
+              { loc: [6, 16], note: 'Testing' },
+              { loc: [17, 19] },
+              {
+                loc: [19, 19],
+                note: (
+                  <span>
+                    Run example on{' '}
+                    <Link href="http://jsbin.com/cipujur/1/edit?js,console">
+                      JS Bin
+                    </Link>.
+                  </span>
+                ),
+              },
             ]}
           />
           <Slide bgColor="primary">
@@ -166,8 +201,27 @@ export default class Presentation extends React.Component {
             lang="js"
             code={require('raw-loader!../assets/code/composition.txt')}
             ranges={[
-              { loc: [0, 11] },
-              { loc: [0, 2], note: 'Walking through some code' },
+              { loc: [0, 0], title: 'Composition' },
+              { loc: [0, 1], note: 'Compose' },
+              { loc: [2, 3] },
+              { loc: [4, 5] },
+              { loc: [2, 5] },
+              { loc: [6, 7] },
+              { loc: [8, 15] },
+              { loc: [16, 19], note: 'Order matters' },
+              { loc: [20, 23], note: 'Pipe' },
+              { loc: [24, 25] },
+              {
+                loc: [25, 25],
+                note: (
+                  <span>
+                    Run example on{' '}
+                    <Link href="http://jsbin.com/mepaji/1/edit?js,console">
+                      JS Bin
+                    </Link>.
+                  </span>
+                ),
+              },
             ]}
           />
           <Slide bgColor="primary">
@@ -176,23 +230,42 @@ export default class Presentation extends React.Component {
           <Slide bgImage={images.gorilla} bgDarken={0.5}>
             <CompositionVsInheritance />
           </Slide>
-          {/* TODO: add inheritance example */}
+          <CodeSlide
+            lang="js"
+            code={require('raw-loader!../assets/code/inheritance.txt')}
+            ranges={[
+              { loc: [0, 0], title: 'Inheritance' },
+              { loc: [2, 4] },
+              { loc: [7, 12] },
+              { loc: [15, 22] },
+              { loc: [25, 33] },
+              { loc: [36, 43] },
+              { loc: [44, 52] },
+              { loc: [55, 63] },
+              { loc: [64, 72] },
+              { loc: [76, 78] },
+              { loc: [79, 89] },
+              { loc: [90, 97] },
+              { loc: [100, 111] },
+              { loc: [112, 120] },
+            ]}
+          />
           <CodeSlide
             lang="js"
             code={require('raw-loader!../assets/code/composition-ftw.txt')}
             ranges={[
               { loc: [0, 1], title: 'Composition' },
               { loc: [2, 8] },
-              { loc: [9, 16] },
-              { loc: [17, 22] },
-              { loc: [23, 28] },
-              { loc: [29, 44] },
-              { loc: [45, 46] },
-              { loc: [47, 48] },
-              { loc: [49, 51] },
-              { loc: [52, 54] },
+              { loc: [9, 12] },
+              { loc: [13, 18] },
+              { loc: [19, 24] },
+              { loc: [25, 40] },
+              { loc: [41, 42] },
+              { loc: [43, 44] },
+              { loc: [45, 47] },
+              { loc: [48, 50] },
               {
-                loc: [0, 1],
+                loc: [50, 50],
                 note: (
                   <span>
                     Run example on{' '}
@@ -211,8 +284,30 @@ export default class Presentation extends React.Component {
             lang="js"
             code={require('raw-loader!../assets/code/curry.txt')}
             ranges={[
-              { loc: [0, 1], title: 'Curry' },
-              { loc: [0, 1], note: 'Walking through some code' },
+              { loc: [0, 0], title: 'Curry' },
+              { loc: [0, 2] },
+              { loc: [3, 9] },
+              { loc: [10, 11] },
+              { loc: [12, 14] },
+              { loc: [15, 17] },
+              { loc: [18, 20] },
+              { loc: [21, 26] },
+              { loc: [27, 28] },
+              { loc: [29, 33] },
+              { loc: [34, 38] },
+              { loc: [39, 40] },
+              { loc: [41, 47] },
+              {
+                loc: [47, 47],
+                note: (
+                  <span>
+                    Run example on{' '}
+                    <Link href="http://jsbin.com/jesolih/1/edit?js,console">
+                      JS Bin
+                    </Link>.
+                  </span>
+                ),
+              },
             ]}
           />
           <Slide bgColor="primary">
@@ -222,8 +317,23 @@ export default class Presentation extends React.Component {
             lang="js"
             code={require('raw-loader!../assets/code/declarative.txt')}
             ranges={[
-              { loc: [0, 1], title: 'Declarative' },
-              { loc: [0, 1], note: 'Walking through some code' },
+              { loc: [0, 0], title: 'Declarative' },
+              { loc: [0, 11] },
+              { loc: [11, 27] },
+              { loc: [28, 33] },
+              { loc: [34, 47] },
+              { loc: [48, 52] },
+              {
+                loc: [52, 52],
+                note: (
+                  <span>
+                    Run example on{' '}
+                    <Link href="http://jsbin.com/xafetap/1/edit?js,console">
+                      JS Bin
+                    </Link>.
+                  </span>
+                ),
+              },
             ]}
           />
           <Slide bgImage={images.rocks}>
@@ -235,13 +345,37 @@ export default class Presentation extends React.Component {
           <Slide bgColor="primary">
             <ImmutabilityResources />
           </Slide>
-          {/* TODO: add JS Bin http://jsbin.com/safiwa/edit?js,console */}
           <CodeSlide
             lang="js"
             code={require('raw-loader!../assets/code/immutability.txt')}
             ranges={[
-              { loc: [0, 1], title: 'Immutability' },
-              { loc: [0, 1], note: 'Walking through some code' },
+              { loc: [0, 0], title: 'Immutability' },
+              { loc: [0, 1] },
+              { loc: [2, 3] },
+              { loc: [4, 5] },
+              { loc: [6, 8] },
+              { loc: [9, 10] },
+              { loc: [13, 14] },
+              { loc: [15, 16] },
+              { loc: [17, 18] },
+              { loc: [19, 21] },
+              { loc: [22, 23] },
+              { loc: [26, 27] },
+              { loc: [28, 29] },
+              { loc: [30, 31] },
+              { loc: [31, 34] },
+              { loc: [35, 36] },
+              {
+                loc: [36, 36],
+                note: (
+                  <span>
+                    Run example on{' '}
+                    <Link href="http://jsbin.com/safiwa/2/edit?js,console">
+                      JS Bin
+                    </Link>.
+                  </span>
+                ),
+              },
             ]}
           />
           <Slide bgColor="primary">

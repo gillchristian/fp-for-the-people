@@ -11,9 +11,15 @@ const list = [
   'JavaScript', 
   'Litoral',
 ]
+ 
+last(list) //=> 'Litoral'
 
 head(reverse(list)) //=> 'Litoral'
 
 reverse(head(list)) //=> throws
- 
-last(list) //=> 'Litoral'
+
+const pipe = (f, g) => (x) => g(f(x))
+
+const last = pipe(reverse, head)
+
+last(list) //=> 'Litoral

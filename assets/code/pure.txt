@@ -1,3 +1,18 @@
+const add = (a, b) =>  a + b
+
+add(1, 3) // 4
+add(1, 3) // 4
+
+const random = () => Math.random()
+
+random() // 0.8394303637125962
+random() // 0.25602009421275707
+
+const timestamp = () => Date.now()
+
+timestamp() // 1501170410250
+timestamp() // 1501170420416
+
 const list = [1, 2, 3, 4, 5]
 
 list.slice(0, 3) //=> [0, 1, 2]
@@ -6,7 +21,6 @@ list.slice(0, 3) //=> [0, 1, 2]
 
 list.slice(0, 3) //=> [0, 1, 2]
 
-
 list.splice(0, 3) //=> [0, 1, 2]
 
 list.splice(0, 3) //=> [4, 5]
@@ -14,3 +28,13 @@ list.splice(0, 3) //=> [4, 5]
 list.splice(0, 3) //=> []
 
 list //=> []
+
+const getUsers = () => trae('/api/users')
+
+getUsers().then(users => {
+  console.log(users) // ['Marta', 'juan']
+})
+
+getUsers().then(users => {
+  console.log(users) // ['Marta', 'Juan']
+})

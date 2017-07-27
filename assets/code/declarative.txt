@@ -26,23 +26,27 @@ const fmwks = [
   },
 ]
 
-// ----- IMPERATIVE -----
+const wanted = [
+  "React by Facebook", 
+  "Vue by Evan You", 
+  "Cycle.js by André Staltz",
+]
 
+// ----- IMPERATIVE -----
 const labels = []
 let index = 0
 
 for (let i = 0 ; i < fmwks.length ; i++) {
-  const label = 
-    `${fmwks[i].name} by ${fmwks[i].author}`
-
   if (fmwks[i].vdom) {
+    const label = 
+      `${fmwks[i].name} by ${fmwks[i].author}`
+
     labels[index] = label
     index++
   }
 }
 
 // ----- DECLARATIVE -----
-
-const labels2 = fmwks
+const labels = fmwks
   .filter(o => o.vdom)
   .map(o => `${o.name} by ${o.author}`)

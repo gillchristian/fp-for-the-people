@@ -8,21 +8,17 @@
 //    = driver + cleaner + barker
 
 const barker = (state) => ({
-  bark() {
-    return (
-      `Woof, woof! I'm ${state.name}!`
-    )
-  }
+  bark: () =>`Woof, woof! I'm ${state.name}!` 
 })
 
 const driver = (state) => ({
-  drive() {
+  drive: () => {
     state.pos = state.pos + state.speed
   }
 })
 
 const cleaner = (state) => ({
-  clean() {
+  clean: () => {
     state.energy -= 10
   }
 })

@@ -1,1 +1,47 @@
-// CURRY
+const _volume = (x, y, z) => x * y * z
+const volume = curry(_volume)
+
+volume(2, 3, 4) //=> 24
+volume(2)(3, 4) //=> 24
+volume(2)(3)(4) //=> 24
+volume(2, 3)(4) //=> 24
+
+volume()()()()()(2)(3)(4) //=> 24
+
+const compose = (f, g) => x => f(g(x))
+
+// map :: (a -> b) -> [a] -> [b]
+const map = curry((f, xs) => xs.map(f))
+
+// filter :: (a -> Bool) -> [a] -> [a]
+const filter = curry((f, xs) => xs.filter(f))
+
+// toUpper :: String -> String
+const toUpper = str => str.toUpperCase()
+
+const users = [
+  { name: 'John', admin: false },
+  { name: 'Jane', admin: true },
+  { name: 'Mark', admin: true },
+]
+
+const wanted = ['JANE', 'MARK']
+
+const uppercaseName = compose(
+  toUpper,  
+  obj => obj.name
+)
+
+const uppercaseAdmins = compose(
+  map(uppercaseName),
+  filter(u => u.admin)
+)
+
+uppercaseAdmins(users) //=> ['JANE', 'MARK']
+
+function curry(fn) {
+  return (...args) => 
+    args.length === fn.length 
+      ? fn(...args) 
+      : curry(fn.bind(null, ...args))
+}

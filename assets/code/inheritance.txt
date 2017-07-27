@@ -73,6 +73,7 @@ Animal
 
 
 // ----- 06 - 1 -----
+
 GameCharacter
   .bark()
 
@@ -96,25 +97,24 @@ GameCharacter
       .meow()
 
 // ----- 06 - 1 -----
-GameCharacter
 
-  Robot
-    .drive()
+Robot
+  .drive()
 
-      CleaningRobot
-        .clean()
+    CleaningRobot
+      .clean()
 
-        CleanerRobotDog
-          .bark()
+      CleanerRobotDog
+        .bark()
 
-      MurderRobot
-        .kill()
+    MurderRobot
+      .kill()
 
-  Animal
-    .eat()
+Animal
+  .eat()
 
-    Dog
-      .bark()
+  Dog
+    .bark()
 
-    Cat
-      .meow()
+  Cat
+    .meow()
