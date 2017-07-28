@@ -10,14 +10,14 @@
     "deploy": "npm run clean & npm run build && surge -p .",
     "start": "cross-env NODE_ENV=development node server.js",
     "prettier": "prettier --single-quote --trailing-comma es5 --no-semi",
-    "format": "npm run prettier -- --write '{,!(node_modules|build)/**/}*.js'",
+    "format": "npm run prettier -- --write '{,!(node_modules|build|dist)/**/}*.js'",
     "precommit": "lint-staged",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "author": "",
   "license": "MIT",
   "lint-staged": {
-    "{,!(node_modules|build)/**/}*.js": [
+    "{,!(node_modules|build|dist)/**/}*.js": [
       "npm run prettier -- --write",
       "git add"
     ]
