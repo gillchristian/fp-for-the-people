@@ -63,19 +63,19 @@ require('normalize.css')
 require('spectacle/lib/themes/default/index.css')
 
 const images = {
-  ohComeOn: require('../assets/oh-come-on.gif'),
-  iKnowFP: require('../assets/i-know-fp.png'),
-  fractal: require('../assets/fractal.png'),
-  gorilla: require('../assets/gorilla-banana.jpg'),
-  curry: require('../assets/curry.jpg'),
-  thanks: require('../assets/thanks.gif'),
-  questions: require('../assets/questions.gif'),
-  rocks: require('../assets/rocks.jpg'),
-  pure: require('../assets/pure.jpg'),
-  city: require('../assets/city.jpg'),
-  lego: require('../assets/lego.jpg'),
-  library: require('../assets/library.jpg'),
-  onlyU: require('../assets/only-you.jpg'),
+  ohComeOn: require('../assets/oh-come-on.gif').replace('/', ''),
+  iKnowFP: require('../assets/i-know-fp.png').replace('/', ''),
+  fractal: require('../assets/fractal.png').replace('/', ''),
+  gorilla: require('../assets/gorilla-banana.jpg').replace('/', ''),
+  curry: require('../assets/curry.jpg').replace('/', ''),
+  thanks: require('../assets/thanks.gif').replace('/', ''),
+  questions: require('../assets/questions.gif').replace('/', ''),
+  rocks: require('../assets/rocks.jpg').replace('/', ''),
+  pure: require('../assets/pure.jpg').replace('/', ''),
+  city: require('../assets/city.jpg').replace('/', ''),
+  lego: require('../assets/lego.jpg').replace('/', ''),
+  library: require('../assets/library.jpg').replace('/', ''),
+  onlyU: require('../assets/only-you.jpg').replace('/', ''),
 }
 
 preloader(images)
