@@ -84,7 +84,7 @@ const colors = {
   primary: 'white',
   secondary: '#434343',
   tertiary: '#4286f4',
-  quartenary: '#CECECE',
+  quartenary: '#7f7b7b',
 }
 
 const theme = createTheme(colors, {
