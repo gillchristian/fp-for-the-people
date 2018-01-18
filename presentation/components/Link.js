@@ -4,7 +4,7 @@ export default styled.a.attrs({
   target: '_blank',
   rel: 'noopener noreferer',
 })`
-  color: ${p => (p.primary ? p.theme.quartenary : p.theme.secondary)};  
+  color: ${p => (p.primary ? p.theme.quartenary : p.theme.secondary)};
   text-decoration: none;
 
   &:visited,

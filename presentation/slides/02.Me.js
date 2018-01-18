@@ -4,7 +4,7 @@ import { Heading, Text } from 'spectacle'
 
 import Link from '../components/Link'
 
-const Component = () =>
+const Component = () => (
   <div>
     <Heading size={4} textColor="tertiary">
       Christian Gill
@@ -15,5 +15,6 @@ const Component = () =>
       <Link href="https://housinganywhere.com/">Housing Anywhere</Link>
     </Text>
   </div>
+)
 
 export default Component

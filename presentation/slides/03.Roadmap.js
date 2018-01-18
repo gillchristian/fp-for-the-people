@@ -12,12 +12,13 @@ const roadmap = [
   'Resources',
 ]
 
-const Roadmap = () =>
+const Roadmap = () => (
   <div>
     <Heading size={2} lineHeight={1}>
       Roadmap
     </Heading>
     <ListItems items={roadmap} />
   </div>
+)
 
 export default Roadmap

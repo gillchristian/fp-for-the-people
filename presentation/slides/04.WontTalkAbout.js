@@ -13,12 +13,13 @@ const wonts = [
   'Black magic',
 ]
 
-const WontTalkAbout = () =>
+const WontTalkAbout = () => (
   <div>
     <Heading fit size={2} lineHeight={1}>
       What this talk IS NOT
     </Heading>
     <ListItems items={wonts} />
   </div>
+)
 
 export default WontTalkAbout

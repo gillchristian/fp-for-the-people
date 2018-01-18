@@ -14,6 +14,7 @@ import {
   Slide,
   Text,
 } from 'spectacle'
+
 import CodeSlide from 'spectacle-code-slide'
 
 // Import image preloader util
@@ -21,6 +22,9 @@ import preloader from 'spectacle/lib/utils/preloader'
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default'
+
+// Require CSS
+import 'normalize.css'
 
 // Import components
 import Link from './components/Link'
@@ -58,10 +62,6 @@ import More from './slides/36.More'
 import Questions from './slides/37.Questions'
 import Remember from './slides/38.Remember'
 
-// Require CSS
-require('normalize.css')
-require('spectacle/lib/themes/default/index.css')
-
 const images = {
   ohComeOn: require('../assets/oh-come-on.gif').replace('/', ''),
   iKnowFP: require('../assets/i-know-fp.png').replace('/', ''),
@@ -84,7 +84,7 @@ const colors = {
   primary: 'white',
   secondary: '#434343',
   tertiary: '#4286f4',
-  quartenary: '#7f7b7b',
+  quarternary: '#7f7b7b',
 }
 
 const theme = createTheme(colors, {

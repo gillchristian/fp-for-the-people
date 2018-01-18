@@ -29,10 +29,11 @@ const more = [
   <Link href="https://reasonml.github.io/">Reason</Link>,
 ]
 
-const More = () =>
+const More = () => (
   <div>
     <Text>More</Text>
     <ListItems items={more} />
   </div>
+)
 
 export default More

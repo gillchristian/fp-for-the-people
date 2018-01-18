@@ -25,10 +25,11 @@ const learning = [
   </Link>,
 ]
 
-const More = () =>
+const More = () => (
   <div>
     <Text>Learning</Text>
     <ListItems items={learning} />
   </div>
+)
 
 export default More

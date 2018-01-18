@@ -10,12 +10,13 @@ const wills = [
   'Insights on why and how to do FP in JS',
 ]
 
-const WillTalkAbout = () =>
+const WillTalkAbout = () => (
   <div>
     <Heading fit size={2} lineHeight={1}>
       What this talk IS
     </Heading>
     <ListItems items={wills} />
   </div>
+)
 
 export default WillTalkAbout
