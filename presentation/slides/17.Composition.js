@@ -5,7 +5,7 @@ import { Heading, Text } from 'spectacle'
 const Composition = () => (
   <div>
     <Heading>Composition</Heading>
-    <Heading size={3} margin="50" textColor="primary">
+    <Heading size={4} margin="50" textColor="primary">
       {'(f ∘ g)(x) = f(g(x))'}
     </Heading>
   </div>

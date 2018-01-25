@@ -66,7 +66,7 @@ import Remember from './slides/38.Remember'
 
 const images = {
   ohComeOn: require('../assets/oh-come-on.gif').replace('/', ''),
-  iKnowFP: require('../assets/i-know-fp.jpg').replace('/', ''),
+  iKnowFP: require('../assets/i-know-fp.png').replace('/', ''),
   fractal: require('../assets/fractal.png').replace('/', ''),
   gorilla: require('../assets/gorilla-banana.jpg').replace('/', ''),
   curry: require('../assets/curry.jpg').replace('/', ''),
