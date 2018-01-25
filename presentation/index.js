@@ -29,6 +29,8 @@ import 'normalize.css'
 // Import components
 import Link from './components/Link'
 
+import notes from './notes'
+
 // Slides
 import Intro from './slides/01.Intro'
 import Me from './slides/02.Me'
@@ -64,7 +66,7 @@ import Remember from './slides/38.Remember'
 
 const images = {
   ohComeOn: require('../assets/oh-come-on.gif').replace('/', ''),
-  iKnowFP: require('../assets/i-know-fp.png').replace('/', ''),
+  iKnowFP: require('../assets/i-know-fp.jpg').replace('/', ''),
   fractal: require('../assets/fractal.png').replace('/', ''),
   gorilla: require('../assets/gorilla-banana.jpg').replace('/', ''),
   curry: require('../assets/curry.jpg').replace('/', ''),
@@ -97,34 +99,38 @@ export default class Presentation extends React.Component {
     return (
       <ThemeProvider theme={colors}>
         <Deck transition={['slide']} transitionDuration={500} theme={theme}>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.intro}>
             <Intro />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.me}>
             <Me />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.roadmap}>
             <Roadmap />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.wontTalkAbout}>
             <WontTalkAbout />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.willTalkAbout}>
             <WillTalkAbout />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.fp}>
             <FP />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.iKnowFP}>
             <IKnowFP image={images.iKnowFP} />
           </Slide>
-          <Slide bgColor="primary" bgImage={images.ohComeOn}>
+          <Slide
+            bgColor="primary"
+            bgImage={images.ohComeOn}
+            notes={notes.definition}
+          >
             <Definition />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.functions}>
             <Functions />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.hofs}>
             <HoFs />
           </Slide>
           <CodeSlide
@@ -140,11 +146,16 @@ export default class Presentation extends React.Component {
               { loc: [7, 13] },
               { loc: [14, 24] },
             ]}
+            notes={notes.hofsCode}
           />
-          <Slide bgImage={images.pure} bgDarken={0.5}>
+          <Slide
+            bgImage={images.pure}
+            bgDarken={0.5}
+            notes={notes.pureFunctions}
+          >
             <PureFunctions />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.pureFunctionsDefinition}>
             <PureFunctionsDefinition />
           </Slide>
           <CodeSlide
@@ -164,8 +175,9 @@ export default class Presentation extends React.Component {
               { loc: [33, 36] },
               { loc: [37, 40] },
             ]}
+            notes={notes.pureFunctionsCode}
           />
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.ezTestEsLife}>
             <EzTestEsLife />
           </Slide>
           <CodeSlide
@@ -190,11 +202,12 @@ export default class Presentation extends React.Component {
                 ),
               },
             ]}
+            notes={notes.ezTestEsLifeCode}
           />
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.pureExample}>
             <PureExample />
           </Slide>
-          <Slide bgImage={images.lego} bgDarken={0.5}>
+          <Slide bgImage={images.lego} bgDarken={0.5} notes={notes.composition}>
             <Composition />
           </Slide>
           <CodeSlide
@@ -223,11 +236,16 @@ export default class Presentation extends React.Component {
                 ),
               },
             ]}
+            notes={notes.compositionCode}
           />
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.fractal}>
             <Fractal image={images.fractal} />
           </Slide>
-          <Slide bgImage={images.gorilla} bgDarken={0.5}>
+          <Slide
+            bgImage={images.gorilla}
+            bgDarken={0.5}
+            notes={notes.compositionVsInheritance}
+          >
             <CompositionVsInheritance />
           </Slide>
           <CodeSlide
@@ -249,6 +267,7 @@ export default class Presentation extends React.Component {
               { loc: [100, 111] },
               { loc: [112, 120] },
             ]}
+            notes={notes.inheritanceCode}
           />
           <CodeSlide
             lang="js"
@@ -276,8 +295,9 @@ export default class Presentation extends React.Component {
                 ),
               },
             ]}
+            notes={notes.compositionCode}
           />
-          <Slide bgImage={images.curry} bgDarken={0.75}>
+          <Slide bgImage={images.curry} bgDarken={0.75} notes={notes.curry}>
             <Curry />
           </Slide>
           <CodeSlide
@@ -309,8 +329,9 @@ export default class Presentation extends React.Component {
                 ),
               },
             ]}
+            notes={notes.curryCode}
           />
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.declarative}>
             <Declarative />
           </Slide>
           <CodeSlide
@@ -335,14 +356,15 @@ export default class Presentation extends React.Component {
                 ),
               },
             ]}
+            notes={notes.declarativeCode}
           />
-          <Slide bgImage={images.rocks}>
+          <Slide bgImage={images.rocks} notes={notes.immutability}>
             <Immutability />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.immutabilityPros}>
             <ImmutabilityPros />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.immutabilityResources}>
             <ImmutabilityResources />
           </Slide>
           <CodeSlide
@@ -377,32 +399,37 @@ export default class Presentation extends React.Component {
                 ),
               },
             ]}
+            notes={notes.immutabilityCode}
           />
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.whyTho}>
             <WhyTho />
           </Slide>
-          <Slide bgColor="#f1e05a">
+          <Slide bgColor="#f1e05a" notes={notes.becauseJS}>
             <BecauseJS />
           </Slide>
-          <Slide bgImage={images.city}>
+          <Slide bgImage={images.city} notes={notes.becauseWeCan}>
             <BecauseWeCan />
           </Slide>
-          <Slide bgImage={images.library} bgDarken={0.75}>
+          <Slide
+            bgImage={images.library}
+            bgDarken={0.75}
+            notes={notes.resources}
+          >
             <Resources />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.libraries}>
             <Libraries />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.learning}>
             <Learning />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.more}>
             <More />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.questions}>
             <Questions image={images.questions} />
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes={notes.remember}>
             <Remember image={images.onlyU} />
           </Slide>
           <Slide bgColor="primary" bgImage={images.thanks} />

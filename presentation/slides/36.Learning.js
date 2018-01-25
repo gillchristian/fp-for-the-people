@@ -6,9 +6,6 @@ import ListItems from '../components/ListItems'
 import Link from '../components/Link'
 
 const learning = [
-  <Link href="https://github.com/timoxley/functional-javascript-workshop">
-    functional-javascript-workshop
-  </Link>,
   <span>
     <Link href="https://twitter.com/drboolean">@drboolean</Link>
     {': '}
@@ -20,6 +17,12 @@ const learning = [
       Videos
     </Link>
   </span>,
+  <Link href="http://www.tomharding.me/fantasy-land/">
+    Fantas, Eel, and Specification
+  </Link>,
+  <Link href="https://github.com/timoxley/functional-javascript-workshop">
+    functional-javascript-workshop
+  </Link>,
   <Link href="http://randycoulman.com/blog/categories/thinking-in-ramda/">
     Thinking in Ramda
   </Link>,

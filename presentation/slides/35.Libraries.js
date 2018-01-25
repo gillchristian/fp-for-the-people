@@ -10,6 +10,7 @@ const libs = [
     <Link href="https://github.com/fantasyland/fantasy-land">Fantasy land</Link>
     {' (spec)'}
   </span>,
+  <Link href="https://sanctuary.js.org/">Sanctuary</Link>,
   <span>
     <Link href="http://ramdajs.com/">Ramda</Link>
     {' & '}

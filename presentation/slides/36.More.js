@@ -26,7 +26,10 @@ const more = [
     {' (paper)'}
   </span>,
   <Link href="http://elm-lang.org/">Elm</Link>,
-  <Link href="https://reasonml.github.io/">Reason</Link>,
+  <Link href="https://reasonml.github.io/">ReasonML</Link>,
+  <Link href="https://jlongster.com/Using-Immutable-Data-Structures-in-JavaScript">
+    Immutable Data Structures and JavaScript
+  </Link>,
 ]
 
 const More = () => (

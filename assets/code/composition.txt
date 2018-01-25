@@ -7,14 +7,14 @@ const reverse = xs => xs.reverse()
 const last = compose(head, reverse)
 
 const list = [
-  'Meetup', 
-  'JavaScript', 
-  'Litoral',
+  'HousingAnywhere', 
+  'JavaScript team', 
+  'Rocks',
 ]
  
-last(list) //=> 'Litoral'
+last(list) //=> 'Rocks'
 
-head(reverse(list)) //=> 'Litoral'
+head(reverse(list)) //=> 'Rocks'
 
 reverse(head(list)) //=> throws
 
@@ -22,4 +22,4 @@ const pipe = (f, g) => (x) => g(f(x))
 
 const last = pipe(reverse, head)
 
-last(list) //=> 'Litoral
+last(list) //=> 'Rocks'
